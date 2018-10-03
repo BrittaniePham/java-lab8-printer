@@ -1,20 +1,24 @@
 package lab8_printer;
 
-public class LaserPrinter extends PrinterApp {
+public class LaserPrinter extends Printer {
 	
-	public int remainingToner;
+	private int remainingToner;
 
-	public void LaserPrinter() {
+	public void LaserPrinter(int sNumber) {
 		remainingToner = 100;
+	}
+	
+	public int getRemainingToner() {
+		return remainingToner;
 	}
 
 	@Override
 	public void print() {
 		if(remainingToner > 0) {
 			remainingToner -= 10;
-			System.out.println("LaserPrinter is printing. Remaining toner: 90%");
+			System.out.println("LaserPrinter is printing. Remaining toner: " + remainingToner + "%");
 		} else if(remainingToner == 0) {
-			System.out.println("Cartridge is empty");
+			System.out.println("artridge is empty");
 		}
 	}
 }

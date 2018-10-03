@@ -1,21 +1,10 @@
 package lab8_printer;
-/*
- *  Author: Brittanie Pham
- */
 
-public abstract class PrinterApp {
-	
-	private int serialNumber;
-	
-	public void Printer(int number) {
-		serialNumber = number;
+public class PrinterApp {
+
+	public static void main(String[] args) {
+		InkjetPrinter ink = new InkjetPrinter();
+		System.out.println(ink);
 	}
-	
-	public abstract void print();
-	
-	@Override
-	public String toString() {
-		return getClass().getSimpleName() + " #" + serialNumber;
-//		return super.toString();
-	}
+
 }
