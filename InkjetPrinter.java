@@ -4,7 +4,8 @@ public class InkjetPrinter extends Printer{
 	
 	private int remainingCartridge;
 
-	public void InkjetPrinter(int sNumber) {
+	public InkjetPrinter(int sNumber) {
+		super(sNumber);
 		remainingCartridge = 100;
 	}
 	

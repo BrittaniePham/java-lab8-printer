@@ -4,7 +4,8 @@ public class LaserPrinter extends Printer {
 	
 	private int remainingToner;
 
-	public void LaserPrinter(int sNumber) {
+	public LaserPrinter(int sNumber) {
+		super(sNumber);
 		remainingToner = 100;
 	}
 	
@@ -18,7 +19,7 @@ public class LaserPrinter extends Printer {
 			remainingToner -= 10;
 			System.out.println("LaserPrinter is printing. Remaining toner: " + remainingToner + "%");
 		} else if(remainingToner == 0) {
-			System.out.println("artridge is empty");
+			System.out.println("Toner is empty");
 		}
 	}
 }

@@ -7,7 +7,7 @@ public abstract class Printer {
 	
 	private int serialNumber;
 	
-	public void Printer(int number) {
+	public Printer(int number) {
 		serialNumber = number;
 	}
 	
